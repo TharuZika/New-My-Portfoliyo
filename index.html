@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" color-scheme="auto">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Tharushika Dilakshan">
+    <meta name="owner" content="Tharushika Dilakshan">
+    <meta name="description" content="I'm a full stack developer and I currently working as freelancer. I'm a Student of IJSE Undergraduate."/>
+
+    <title>TharuZika</title>
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://kit.fontawesome.com/97dbc65e21.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav class="nav-bar">
+                <img src="assets/images/logo.png" class="logo">
+                <ul id="sideMenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Tharushika</span><br>Dilakshan</h1>
+            </div>
+        </div>
+    </div>
+
+<!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/images/taruz%20tp.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span>Me</span></h1>
+                    <p>I am Tharushika Dilakshan. I studied at Allsaints' College.
+                        I am currently following software engineering course at IJSE.
+                        An enthusiastic student with highly motivated and studying Software
+                        Engineering. Eager to learn new technologies and always willing
+                        to innovate the new things which can improve the existing technology.
+                        An easy going person with positive
+                        attitudes and good team working ability</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')"> Experience</p>
+                        <p class="tab-links" onclick="opentab('education')"> Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designer Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>SE internship at WebCom (pvt) ltd</li>
+                            <li><span>2020-Current</span><br>Freelancer at Fiverr</li>
+                            <li><span>2020-Current</span><br>Freelancer at Upwork</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017</span><br>GCE O/L Examination 9/9</li>
+                            <li><span>2020</span><br>GCE A/L Examination with 2 Passes in Physical Stream</li>
+                            <li><span>2021</span><br>Currently following BSc (Hons) in Computer Science via GDSE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    Services-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title"><span>My</span> Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I have experience with latest technology for web development. HTML,CSS,JS,JavaEE</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design & Frontend Development</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A accusamus alias aliquam autem fugit id itaque. Consectetur,
+                        dignissimos dolorem eaque eius fugiat illum magni quaerat
+                        quasi rerum sint totam veniam!</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h2>Application Development</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A accusamus alias aliquam autem fugit id itaque. Consectetur,
+                        dignissimos dolorem eaque eius fugiat illum magni quaerat
+                        quasi rerum sint totam veniam!</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    My Projects-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"><span>My</span> Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="assets/images/projects/calculator.png">
+                    <div class="layer">
+                        <h3>Calculator</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Amet doloribus est ipsam magni mollitia numquam omnis quos sed tenetur totam.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/images/projects/ChattApp.png">
+                    <div class="layer">
+                        <h3>Chat App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Amet doloribus est ipsam magni mollitia numquam omnis quos sed tenetur totam.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/images/projects/game.png">
+                    <div class="layer">
+                        <h3>TheFracturedGalaxy - JS Game</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Amet doloribus est ipsam magni mollitia numquam omnis quos sed tenetur totam.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    
+<!--    Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact <span>Me</span></h1>
+                    <p><i class="fa-solid fa-envelope"></i>maxtharuz4@gmail.com</p>
+                    <p><i class="fa-solid fa-envelope"></i>mail2maxtharuz4@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>0775080969</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <a href="assets/downloads/download.png" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form id="contactForm">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2022 TharuZika</p>
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
