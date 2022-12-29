@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .cursor-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cursor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: #000;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: cursor-animation 2s infinite;
+    }
+
+    .cursor-tail {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: #00ffff;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50px, 0);
+      animation: cursor-tail-animation 2s infinite;
+    }
+
+    @keyframes cursor-animation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes cursor-tail-animation {
+      0% {
+        transform: translate(-50px, 0);
+      }
+      50% {
+        transform: translate(-25px, 0);
+      }
+      100% {
+        transform: translate(-50px, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="cursor-container">
+  <div class="cursor"></div>
+  <div class="cursor-tail"></div>
+</div>
+
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script>
+
+  // $(document).on('mousemove', function(e) {
+  //   $('.cursor').css({
+  //     top: e.pageY,
+  //     left: e.pageX
+  //   });
+  //   $('.cursor-tail').css({
+  //     top: e.pageY,
+  //     left: e.pageX
+  //   });
+  // });
+
+  $(document).on('mousemove', function(e) {
+    $('.cursor').css({
+      top: e.pageY - 17 ,
+      left: e.pageX - 17
+    }).animate({
+      width: '28px',
+      height: '28px',
+      'border-radius': '20%'
+    }, 100).animate({
+      width: '20px',
+      height: '20px',
+      'border-radius': '50%'
+    }, 100);
+    $('.cursor-tail').css({
+      top: e.pageY,
+      left: e.pageX
+    }).animate({
+      'transform': 'translate(-25px, 0)'
+    }, 200).animate({
+      'transform': 'translate(-50px, 0)'
+    }, 200);
+  });
+
+
+
+</script>
+</body>
+</html>
