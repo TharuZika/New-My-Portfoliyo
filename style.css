@@ -757,7 +757,9 @@ nav .fas{
 
 
 .new-class {
-    background-color: rgba(39, 49, 76, 0.88);
+    background-color: rgba(39, 49, 76, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 

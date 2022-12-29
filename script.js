@@ -26,7 +26,7 @@ function closeMenu(){
 // mouse animation
 
 window.addEventListener('scroll', function() {
-    if (window.scrollY >= 500) {
+    if (window.scrollY >= 200) {
         document.querySelector('#elementId').classList.add('new-class');
     } else {
         document.querySelector('#elementId').classList.remove('new-class');
@@ -36,21 +36,21 @@ const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
 const colors = [
-    "#000080",
-    "#00008B",
-    "#191970",
-    "#680060",
-    "#1E90FF",
-    "#6495ED",
-    "#4682B4",
-    "#00BFFF",
-    "#00FFFF",
-    "#7FFFD4",
-    "#00CED1",
+    "#010142",
+    "#000074",
+    "#04048b",
+    "#1508a8",
+    "#0c5aa7",
+    "#1852ba",
+    "#277bc1",
+    "#2797bd",
+    "#27b8b8",
+    "#28a4a8",
+    "#38a4c4",
     "#48D1CC",
     "#40E0D0",
-    "#F0FFFF",
-    "#E0FFFF",
+    "#4bc9c9",
+    "#56d5d5",
     "#66CCCC",
     "#87CEFF",
     "#87CEFA",
