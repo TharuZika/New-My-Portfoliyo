@@ -6,14 +6,21 @@
     box-sizing: border-box;
 }
 
+a,button{
+    cursor: none;
+}
+
 html{
     cursor: none;
     scroll-behavior: smooth;
 }
 
 body{
-    background: #262626;
+    /*background: #262626;*/
     color: white;
+    background-image: url('assets/images/mainBG.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 #header{
@@ -229,7 +236,6 @@ nav>ul>li>a:hover::after{
     transition: 0.5s;
     color: #111;
     border-radius: 4px;
-    cursor: pointer;
 }
 
 .card-cont .card .contentBx .size span:hover{
@@ -295,6 +301,12 @@ nav>ul>li>a:hover::after{
     font-weight: 600;
     color: white;
 }
+.sub-sub-title{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
 .sub-title>span{
     color: #0088ff;
 }
@@ -308,7 +320,6 @@ nav>ul>li>a:hover::after{
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
-    cursor: pointer;
     position: relative;
 }
 
@@ -365,7 +376,7 @@ nav>ul>li>a:hover::after{
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    transition: all 0.5s, transform 0.5s;
 }
 
 .services-list>div>i{
@@ -389,6 +400,8 @@ nav>ul>li>a:hover::after{
 
 .services-list>div:hover{
     background: #0088ff;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    -webkit-box-reflect:below 0.5px linear-gradient(transparent, transparent, #0004);
     transform: translateY(-10px);
 }
 
@@ -411,7 +424,6 @@ nav>ul>li>a:hover::after{
 /*}*/
 
 .work{
-    cursor: pointer;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -565,7 +577,6 @@ form>.btn2{
     font-size: 18px;
     margin-top: 20px;
     margin-left: 10px;
-    cursor: pointer;
 }
 
 .btn.btn2:hover{
@@ -589,15 +600,17 @@ nav .fas{
     position: fixed;
     bottom: 50px;
     right: 50px;
-    cursor: pointer;
     width: 50px;
     height: 50px;
-    background: #ffffff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(236, 243, 255, 0.07);
     border-radius: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .goHomeButton>a{
@@ -711,7 +724,6 @@ nav .fas{
         position: absolute;
         top: 25px;
         left: 25px;
-        cursor: pointer;
     }
 
     .logo{
@@ -776,6 +788,7 @@ nav .fas{
     left: 0;
     pointer-events: none;
     z-index: 99999999; /* so that it stays on top of all other elements */
+
 }
 
 

@@ -6,6 +6,8 @@
 
   <title>Assignments</title>
 
+  <script src="https://kit.fontawesome.com/97dbc65e21.js" crossorigin="anonymous"></script>
+
   <style>
 
     *{
@@ -15,12 +17,18 @@
       font-family: 'Poppins' ,sans-serif;
     }
 
+    h3,p{
+      color: white;
+    }
+
     body{
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: #222;
+      background-image: url('assets/images/mainBG.jpg');
+      background-size: cover;
+      background-position: center;;
     }
 
     .container{
@@ -29,7 +37,8 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      max-width: 1100px;
+      max-width: 80vw;
+      margin-left: 200px;
     }
 
     .container .card{
@@ -66,7 +75,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #fff;
+      background: #0088ff;
       transform: scaleX(0);
       transition: transform 0.5s ease-in-out;
       transform-origin: right;
@@ -108,10 +117,221 @@
       font-weight: 300;
     }
 
+    .navigation{
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      width: 80px;
+      border-radius: 10px;
+      border-left: 5px solid #0088ff;
+      background: #0088ff;
+      transition: 0.5s;
+      overflow: hidden;
+      z-index: 99;
+    }
+
+    .navigation.active{
+      width: 300px;
+    }
+
+    .navigation ul{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-left: 5px;
+      padding-top: 50px;
+      transition: all 0.5s;
+    }
+
+    .navigation ul li{
+      position: relative;
+      list-style: none;
+      width: 100%;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+
+    .navigation ul li.active{
+      background: #fff;
+    }
+
+    .navigation ul li a{
+      position: relative;
+      display: block;
+      width: 100%;
+      display: flex;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.5s;
+    }
+
+    .navigation ul li.active a{
+      color: #333;
+    }
+
+    .navigation ul li a .icon{
+      position: relative;
+      display: block;
+      min-width: 60px;
+      height: 60px;
+      line-height: 60px;
+      padding-top: 5px;
+      text-align: center;
+      transition: all 0.5s;
+    }
+
+    .navigation ul li a .icon i{
+      font-size: 28px;
+    }
+
+    .navigation ul li a .title{
+      position: relative;
+      font-weight: 600;
+      display: block;
+      padding-left: 10px;
+      height: 60px;
+      line-height: 60px;
+      white-space: normal;
+      transition: all 0.5s;
+    }
+
+    .navigation .list .sub-list{
+      background-color: white;
+      margin-left: 10px;
+      margin-top: 5px;
+      z-index: 100;
+      transition: all 0.5s;
+      display: none;
+    }
+
+    /*.navigation .list:hover .sub-list{*/
+    /*  display: block;*/
+    /*}*/
+
+    .toggle{
+      position: fixed;
+      padding-left: 13px;
+      top: 20px;
+      left: 85px;
+      width: 50px;
+      height: 50px;
+      background: #ffffff;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s;
+      z-index: 98;
+    }
+
+    .toggle.active{
+      background: #ffffff;
+      left: 304px;
+    }
+
+    .toggle i{
+      position: absolute;
+      color: #0088ff;
+      font-size: 34px;
+      display: none;
+    }
+
+    .toggle i.open,
+    .toggle.active i.close{
+      display: block;
+
+    }
+
+    .toggle i.close,
+    .toggle.active i.open{
+      display: none;
+      color: #0088ff;
+    }
+
+    @media only screen and (max-width: 900px){
+      .navigation{
+        left: -80px;
+      }
+
+      .toggle{
+        left: -14px;
+      }
+      .toggle.active{
+        left: 286px;
+      }
+      .navigation.active{
+        width: 80vw;
+        left: 0px;
+      }
+
+      .container{
+        max-width: 100vw;
+        margin: 0;
+      }
+
+    }
+
+
 
   </style>
 </head>
 <body>
+<div>
+<!--  navigation menu-->
+  <div class="navigation">
+    <ul>
+      <li class="list active css">
+        <a href="#">
+          <span class="icon"><i class="fa-brands fa-css3-alt"></i></span>
+          <span class="title">CSS</span>
+        </a>
+        <ul>
+          <li class="sub-list" style="margin-top: 15px">
+            <a href="#">
+              <span class="icon"><i class="fa-solid fa-laptop-file"></i></span>
+              <span class="title">Basic</span>
+            </a>
+          </li>
+          <li class="sub-list">
+            <a href="#">
+              <span class="icon"><i class="fa-solid fa-maximize"></i></span>
+              <span class="title">Transitions</span>
+            </a>
+          </li>
+          <li class="sub-list">
+            <a href="#">
+              <span class="icon"><i class="fa-brands fa-css3-alt"></i></span>
+              <span class="title">Animations</span>
+            </a>
+          </li>
+          <li class="sub-list">
+            <a href="#">
+              <span class="icon"><i class="fa-brands fa-css3-alt"></i></span>
+              <span class="title">Frameworks</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fa-brands fa-html5"></i></span>
+          <span class="title">JavaScript</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="toggle">
+    <i class="fa-solid fa-chevron-right open"></i>
+    <i class="fa-solid fa-chevron-left close"></i>
+  </div>
+
+</div>
 <div class="container">
   <div class="card">
     <div class="imgBx">
@@ -191,6 +411,137 @@
       </div>
     </div>
   </div>
+  <div class="card">
+    <div class="imgBx">
+      <img src="assets/images/projects/calculator.png" alt="image">
+    </div>
+    <div class="contentBx">
+      <div class="content">
+        <h3>Assignment 6</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis corporis cum debitis
+          dignissimos ea enim eos excepturi expedita, incidunt ipsam laborum minus nam non, quam quo reiciendis unde
+          voluptas?</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx">
+      <img src="assets/images/projects/calculator.png" alt="image">
+    </div>
+    <div class="contentBx">
+      <div class="content">
+        <h3>Assignment 6</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis corporis cum debitis
+          dignissimos ea enim eos excepturi expedita, incidunt ipsam laborum minus nam non, quam quo reiciendis unde
+          voluptas?</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx">
+      <img src="assets/images/projects/calculator.png" alt="image">
+    </div>
+    <div class="contentBx">
+      <div class="content">
+        <h3>Assignment 6</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis corporis cum debitis
+          dignissimos ea enim eos excepturi expedita, incidunt ipsam laborum minus nam non, quam quo reiciendis unde
+          voluptas?</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx">
+      <img src="assets/images/projects/calculator.png" alt="image">
+    </div>
+    <div class="contentBx">
+      <div class="content">
+        <h3>Assignment 6</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis corporis cum debitis
+          dignissimos ea enim eos excepturi expedita, incidunt ipsam laborum minus nam non, quam quo reiciendis unde
+          voluptas?</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx">
+      <img src="assets/images/projects/calculator.png" alt="image">
+    </div>
+    <div class="contentBx">
+      <div class="content">
+        <h3>Assignment 6</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis corporis cum debitis
+          dignissimos ea enim eos excepturi expedita, incidunt ipsam laborum minus nam non, quam quo reiciendis unde
+          voluptas?</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx">
+      <img src="assets/images/projects/calculator.png" alt="image">
+    </div>
+    <div class="contentBx">
+      <div class="content">
+        <h3>Assignment 6</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis corporis cum debitis
+          dignissimos ea enim eos excepturi expedita, incidunt ipsam laborum minus nam non, quam quo reiciendis unde
+          voluptas?</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx">
+      <img src="assets/images/projects/calculator.png" alt="image">
+    </div>
+    <div class="contentBx">
+      <div class="content">
+        <h3>Assignment 6</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis corporis cum debitis
+          dignissimos ea enim eos excepturi expedita, incidunt ipsam laborum minus nam non, quam quo reiciendis unde
+          voluptas?</p>
+      </div>
+    </div>
+  </div>
 </div>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script>
+
+  $(".css").click(function (e){
+    if ($(".sub-list").css('display')=="block"){
+      $(".sub-list").css('display', 'none');
+      $(".list").css('margin-bottom', "10px");
+    }else {
+      $(".sub-list").css('display', 'block');
+      $(".list").css('margin-bottom', "260px");
+    }
+
+
+
+  });
+
+  let menuToggle = document.querySelector('.toggle');
+  let navigation = document.querySelector('.navigation');
+  menuToggle.onclick = function (){
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+  }
+
+
+
+  let list = document.querySelectorAll('.list');
+  for (let i = 0; i<list.length; i++){
+    list[i].onclick = function (e){
+      let j = 0;
+      while(j < list.length){
+        list[j++].className = 'list';
+      }
+      list[i].className = 'list active';
+    }
+
+
+
+  }
+</script>
+
 </body>
 </html>
