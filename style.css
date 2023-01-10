@@ -606,11 +606,12 @@ nav .fas{
     -webkit-backdrop-filter: blur(10px);
     background: rgba(236, 243, 255, 0.07);
     border-radius: 50px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: all 0.5s;
 }
 
 .goHomeButton>a{
@@ -762,8 +763,11 @@ nav .fas{
 
 }
 
-.nav-bar {
+.goHomeButtonNew{
+    display: flex;
+}
 
+.nav-bar {
     transition: all 0.3s;
 }
 

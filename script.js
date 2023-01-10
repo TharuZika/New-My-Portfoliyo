@@ -28,8 +28,10 @@ function closeMenu(){
 window.addEventListener('scroll', function() {
     if (window.scrollY >= 200) {
         document.querySelector('#elementId').classList.add('new-class');
+        document.querySelector('.goHomeButton').classList.add('goHomeButtonNew');
     } else {
         document.querySelector('#elementId').classList.remove('new-class');
+        document.querySelector('.goHomeButton').classList.remove('goHomeButtonNew');
     }
 });
 const coords = { x: 0, y: 0 };
