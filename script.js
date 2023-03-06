@@ -16,11 +16,11 @@ function opentab(tab){
 var sideMenu = $("#sideMenu");
 
 function openMenu(){
-    sideMenu.css('right', 0);
+    sideMenu.css('right', '-70px');
 }
 
 function closeMenu(){
-    sideMenu.css('right', '-200px');
+    sideMenu.css('right', '-250px');
 }
 
 // mouse animation
